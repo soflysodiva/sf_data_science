@@ -9,12 +9,14 @@ def random_predict(number:int=1) -> int:
     Returns:
         int: Число попыток
     """
+    number = np.random.randint(1,101)
     count = 0
     left = 1
     right= 100
-    while True:
+    # Используем алгоритм бинарного поиска
+    while True: 
       count += 1
-      guess_number = (left+right)//2
+      guess_number = (left+right)//2 # Предполагаемое число
       if guess_number == number:
         break
       elif guess_number > number:
